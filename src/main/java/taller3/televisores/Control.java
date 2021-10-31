@@ -13,7 +13,7 @@ public class Control {
 		}
 	}
 	public void setVolumen(int volumen) {
-		if (volumen >= 1 && volumen <=7 && tv.estado == true) {
+		if (volumen >= 0 && volumen <=7 && tv.estado == true) {
 			tv.volumen = volumen;
 		}
 	}
@@ -27,25 +27,25 @@ public class Control {
 	}
 	
 	public void canalUp() {
-		if (tv.canal >= 1 && tv.canal <=120 && tv.estado == true) {
+		if (tv.canal >= 1 && tv.canal <120 && tv.estado == true) {
 			tv.canal++;
 		}
 	}
 	
 	public void canalDown() {
-		if (tv.canal >= 1 && tv.canal <=120 && tv.estado == true) {
+		if (tv.canal > 1 && tv.canal <=120 && tv.estado == true) {
 			tv.canal--;
 		}
 	}
 	
 	public void volumenUp() {
-		if (tv.volumen >= 1 && tv.volumen <=7 && tv.estado == true) {
+		if (tv.volumen >= 1 && tv.volumen <7 && tv.estado == true) {
 			tv.volumen++;
 		}
 	}
 	
 	public void volumenDown() {
-		if (tv.volumen >= 1 && tv.volumen <=7 && tv.estado == true) {
+		if (tv.volumen > 1 && tv.volumen <=7 && tv.estado == true) {
 			tv.volumen--;
 		}
 	}

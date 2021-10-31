@@ -24,30 +24,29 @@ public class TV {
 	}
 	
 	public void canalUp() {
-		if (canal >= 1 && canal <=120 && estado == true) {
-			canal++;
+		if (canal >= 1 && canal <120 && estado == true) {
+			canal ++;
 		}
 	}
 	
 	public void canalDown() {
-		if (canal >= 1 && canal <=120 && estado == true) {
+		if (canal > 1 && canal <=120 && estado == true) {
 			canal--;
 		}
 	}
 	
 	public void volumenUp() {
-		if (volumen >= 1 && volumen <=7 && estado == true) {
+		if (volumen >= 0 && volumen <7 && estado == true) {
 			volumen++;
 		}
 	}
 	
 	public void volumenDown() {
-		if (volumen >= 1 && volumen <=7 && estado == true) {
+		if (volumen >= 0 && volumen <=7 && estado == true) {
 			volumen--;
 		}
 	}
-	
-	
+
 	public Marca getMarca() {
 		return marca;
 	}
@@ -61,7 +60,9 @@ public class TV {
 	}
 
 	public void setCanal(int canal) {
-		this.canal = canal;
+		if (canal >= 1 && canal <=120 && estado == true) {
+			this.canal = canal;
+		}
 	}
 
 	public int getPrecio() {
@@ -77,7 +78,9 @@ public class TV {
 	}
 
 	public void setVolumen(int volumen) {
-		this.volumen = volumen;
+		if (volumen >= 0 && volumen <=7 && estado == true) {
+			this.volumen = volumen;
+		}
 	}
 
 	public Control getControl() {
@@ -88,10 +91,6 @@ public class TV {
 		this.control = control;
 	}
 
-	public boolean getEstado() {
-		return estado;
-	}
-
 	public static int getNumTV() {
 		return NumTV;
 	}
@@ -99,6 +98,9 @@ public class TV {
 	public static void setNumTV(int numTV) {
 		NumTV = numTV;
 	}
+	
+	
+	
 
 	
 	
