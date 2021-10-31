@@ -60,5 +60,12 @@ public class Control {
 		this.tv = tv;
 	}
 	
+	public Control getControl() {
+		return tv.control;
+	}
+
+	public void setControl(Control control) {
+		tv.control = control;
+	}
 	
 }
